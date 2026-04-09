@@ -1,0 +1,18 @@
+﻿@model COMP003B.Assignment3.Models.EventRegistration
+@{
+    ViewData["Title"] = "Event Registration - Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Event Registered</h2>
+<p>You have succesfully registered for your event!</p>
+<div>
+    <p> Name: @Model.FullName.</p>
+    <p> Email: @Model.Email.</p>
+    <p> Event Code: @Model.EventCode.</p>
+    <p> Tickets: @Model.Tickets.</p>
+    <p> Referral Code (optional): @(Model.ReferralCode ?? "No referral used").</p>
+</div>
+<a asp-action="Register">Register for another Event!</a>
+
